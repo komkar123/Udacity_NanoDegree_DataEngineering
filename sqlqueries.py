@@ -35,10 +35,10 @@ user_table_insert="""insert into users (user_id,first_name,last_name,gender,leve
 values (%s,%s,%s,%s,%s) \
 on conflict(user_id) do update set level=excluded.level;"""
 
-song_select = ("""select songs.song_id,songs.artist_id from songs join artists on songs.artist_id=artists.artist_id where (title=%s and name=%s and duration=%s) """)
+song_select = ("""select s.song_id,a.artist_id from songs s join artists a on s.artist_id=a.artist_id where title=%s and name=%s and duration=%s """)
               
-songplay_table_insert = """insert into songplays (songplay_id ,start_time , user_id , level , song_id, artist_id , session_id , location , user_agent) values \
-(%s,%s,%s,%s,%s,%s,%s,%s,%s) """
+songplay_table_insert = """insert into songplays (start_time , user_id , level , song_id, artist_id , session_id , location , user_agent) values \
+(%s,%s,%s,%s,%s,%s,%s,%s) """
 
 #songplay_table_insert = """insert into songplays ( songlevel ) values \
 #(%s,) on conflict (songplay_id) do nothing"""
