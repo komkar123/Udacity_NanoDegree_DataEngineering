@@ -17,6 +17,6 @@ Date
 Users
 
 Fact
-Song Plays - Records the number of songs played 
+Song Plays - Records the number of songs played by users
 
 
