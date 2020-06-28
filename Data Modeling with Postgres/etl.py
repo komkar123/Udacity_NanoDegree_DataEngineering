@@ -1,20 +1,4 @@
-import os
-import glob
-import psycopg2
-import pandas as pd
-from sql_queries import *
 
-
-def process_song_file(cur, filepath):
-    # open song file
-    df = 
-
-    # insert song record
-    song_data = 
-    cur.execute(song_table_insert, song_data)
-    
-    # insert artist record
-    artist_data = import os
 import glob
 import psycopg2
 import pandas as pd
