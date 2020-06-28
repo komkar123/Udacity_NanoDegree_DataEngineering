@@ -5,10 +5,17 @@ import pandas as pd
 from sqlqueries import *
 from datetime import datetime
 from createtables import *
-
-
-    
+   
 def getfiles(conn,cur,filepath,func):
+   """Iterate all files nested under filepath, and processes all json files found.
+    Parameters:
+        cur : Cursor of the sparkifydb 
+        conn : Connectio to the sparkifycdb database
+        filepath : Filepath parent of the logs to be analyzed
+        func : Function to be used to process each json file  
+    Returns:
+        Name of files processed
+    """
     all_files=[]
     for root,dirs,files in os.walk(filepath):
         files=glob.glob(os.path.join(root,'*.json'))
@@ -25,6 +32,12 @@ def getfiles(conn,cur,filepath,func):
     #return all_files
 
 def process_song_file(cur,filepath):
+    """This function read JSON files of song and artist data and saves into Song and Artist row by row.
+        Arguments:
+        cur: Cursor of sparkifydb
+        filepath: path of JSON file
+        Return: None
+    """
     df=pd.read_json(filepath,lines=True)
     
     song_data=(df[['song_id','title','artist_id','year','duration']].values).tolist()
@@ -34,6 +47,12 @@ def process_song_file(cur,filepath):
     cur.execute(artist_table_insert,artist_data[0])
 
 def process_log_file(cur,filepath):
+    """ This function read JSON Files of Activity of User and filters by NextSong, selects needed fields, transforms them and inserts
+    them into Time, Users and SongPlay.
+    Parameters:
+                cur:  Cursor of the sparkifydb 
+                filepath: Path of JSON File
+    """
     df=pd.read_json(filepath,lines=True)
     df=df[df['page']=='NextSong']
     
@@ -82,12 +101,6 @@ def process_log_file(cur,filepath):
     cur.execute(songplay_table_insert,songplay_data)   
     #conn.commit()
     
-    
-    
-    
-    
-
-
 def main():
     conn=psycopg2.connect("host=localhost dbname=sparkifydb user=student password=student")
     cur=conn.cursor()
@@ -98,15 +111,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-    
-
-    
-        
-        
-   
-        
-    
     cur.execute(artist_table_insert, artist_data)
 
 
