@@ -29,4 +29,4 @@ class LoadDimensionOperator(BaseOperator):
             self.table,
             self.sql
         )
-        postgres.run(insert_sql)
+        postgres.run(insertsqlop)

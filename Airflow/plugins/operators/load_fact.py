@@ -27,4 +27,4 @@ class LoadFactOperator(BaseOperator):
             self.table,
             self.sql
         )
-        postgres.run(insert_sql)
+        postgres.run(insertsqlop)
