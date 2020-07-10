@@ -1,3 +1,3 @@
-# Udacity_NanoDegree_DataEngineering
+# Data Engineering Nanodegree
 
-Projects for the nanodegree offered by Udacity
+## Projects for the nanodegree offered by Udacity
