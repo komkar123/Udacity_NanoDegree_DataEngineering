@@ -6,7 +6,7 @@ The aim is to create a Postgres Database Schema and ETL pipeline to optimize que
 
 # Project Description
 
-In this project, We have to model data with Postgres and build and ETL pipeline using Python to perform optimized queries on song play analysis. On the database side, We have to define fact and dimension tables to use Star Schema and ETL pipeline should be created to transfer data from files located in two local directories into these tables in Postgres using Python and SQL
+In this project, we have to model data with Postgres and build and ETL pipeline using Python to perform optimized queries on song play analysis. On the database side, We have to define fact and dimension tables to use Star Schema and ETL pipeline should be created to transfer data from files located in two local directories into these tables in Postgres using Python and SQL.
 
 ## Schema for Song Play Analysis
 
