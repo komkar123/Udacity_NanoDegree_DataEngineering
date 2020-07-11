@@ -2,7 +2,7 @@
 
 ## Projects for the nanodegree offered by Udacity
 
-[**Data Modeling with Postgres**] (https://github.com/komkar123/Udacity_NanoDegree_DataEngineering/tree/master/Data%20Modeling%20with%20Postgres).
+*[Data Modeling with Postgres](https://github.com/komkar123/Udacity_NanoDegree_DataEngineering/tree/master/Data%20Modeling%20with%20Postgres)*.
 
 In this project, we have to model data with Postgres and build and ETL pipeline using Python to perform optimized queries on song play analysis. On the database side, We have to define fact and dimension tables to use Star Schema and ETL pipeline should be created to transfer data from files located in two local directories into these tables in Postgres using Python and SQL.
 
