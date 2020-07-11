@@ -18,7 +18,7 @@ Music Streaming Service Sparkify has attained popularity now. Their song databas
 
 The Sparikfy wants to analyze and get insights of the users who are listening to songs. For this, we are supposed to develop ETL pipeline to extract song and log data from the S3 hosted buckets by Udacity. We then have to perform analytics using Spark through Python (PySpark) and load the target dimension and fact tables. We need to process this JSON data and analyze it and transform it into insights. In order to achieve this we try to dump this data back into S3 which can be visualized by many BI tools on AWS.
 
-### [Processing ETL Pipelines with Apache Airflow] (https://github.com/komkar123/Udacity_NanoDegree_DataEngineering/tree/master/Airflow)
+[## Processing ETL Pipelines with Apache Airflow] (https://github.com/komkar123/Udacity_NanoDegree_DataEngineering/tree/master/Airflow)
 
 In this project, we use Airflow to manage, develop and monitor the etl pipelines. By using different Operators, Hooks for connecting to AWS on user's behalf allows us to create dump the data from JSON files into redshift. We define DAGs (Directed Acyclic Graph) to create tables, insert data into tables and move data from S3 bucket to redshift. The use of Airflow is made to monitor and schedule the pipelines and it is easy to view logs and see and manage the errors.
 
